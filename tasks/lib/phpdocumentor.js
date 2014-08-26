@@ -158,6 +158,14 @@ exports.init = function(grunt) {
             phpDocumentorCommand += ' --directory=' + directory;
 
             // TODO: see the help of the command with 'phpdoc help run' and add the missing options
+            
+            if (options.template !== '') {
+                phpDocumentorCommand += ' --template=' + options.template;
+            }
+            
+            if (options.ignore !== '') {
+                phpDocumentorCommand += ' --ignore=' + options.ignore;
+            }
 
         } 
         
